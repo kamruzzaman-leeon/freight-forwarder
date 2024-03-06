@@ -4,21 +4,24 @@ import logo from '../../public/logo/Soul-Aviation-logo-transparent.png';
 
 const Navbar = () => {
     const navitem = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/services">Travel & Tourism</Link></li>
-        <li>
-            <span>About-Us</span>
-            <ul className="p-2">
-                <li><Link to="/about-us/our-story">Our Story</Link></li>
-                <li><Link to="/about-us/our-people">Our People</Link></li>
-                <li><Link to="/about-us/our-companies">Our Companies</Link></li>
-                <li><Link to="/about-us/award-accreditation">Award & Accreditation</Link></li>
-            </ul>
-        </li>
-    </>
+    <li><Link to="/">Home</Link></li>
+    
+   <li>
+   <details className="dropdown dropdown-hover">
+        <summary  tabIndex={0} role="button" className=''>About-Us</summary>
+        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><Link to="/about-us/our-story">Our Story</Link></li>
+            <li><Link to="/about-us/our-people">Our People</Link></li>
+            <li><Link to="/about-us/our-companies">Our Companies</Link></li>
+            <li><Link to="/about-us/award-accreditation">Award & Accreditation</Link></li>
+        </ul>
+    </details>
+   </li>
+    <li><Link to="/services">Services</Link></li>
+    <li><Link to="/services">Travel & Tourism</Link></li>
+</>
     return (
-        <div className="flex justify-between bg-base-200">
+        <div className="flex justify-between bg-base-100">
 
 
             <div className="lg:hidden dropdown">
